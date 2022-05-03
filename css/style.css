@@ -74,16 +74,15 @@ body{
 }
 
 #title {
-  position: absolute;
+  position: relative;
   top: 0;
-  left: 2rem;
-  right: 2rem;
+  /* left: 2rem;
+  right: 2rem; */
   color: #FFF;
   text-align: center;
   font-family: "lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  
 }
 
 .box{
