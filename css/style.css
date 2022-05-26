@@ -13,9 +13,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
 
 html {
-  /* height: 100%; */
-  background: radial-gradient(ellipse at bottom, #1b2735 50%, #090a0f 100%);
- 
+  background: radial-gradient(ellipse at bottom, #121922 100%, #090a0f 100%);
 }
 
 body{
@@ -77,8 +75,6 @@ body{
 #title {
   position: relative;
   top: 0;
-  /* left: 2rem;
-  right: 2rem; */
   color: #FFF;
   text-align: center;
   font-family: "lato", sans-serif;
@@ -86,13 +82,18 @@ body{
   font-size: 1rem;
 }
 
-.box{
-  display: flex;
+.box img{
+  width: 100%;
 }
 
-.box img{
-  width: 50%;
+.box p{
+  text-align: justify;
 }
+
+.hidden{
+  display: none;
+}
+
 
 @keyframes animStar {
   from {
@@ -106,11 +107,3 @@ body{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-@media (max-width: 1020px){
-  .box{
-    display: block;
-  }
-  .box img{
-    width: 100%;
-  }
-}

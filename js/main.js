@@ -1,5 +1,9 @@
 //The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
-document.querySelector('button').addEventListener('click', getFetch)
+const chooseDate = document.querySelector('#choose-date')
+const showDate = document.querySelector('#show-date')
+
+
+document.querySelector('#get').addEventListener('click', getFetch)
 
 function getFetch() {
   const date = document.querySelector('input').value
@@ -12,12 +16,23 @@ function getFetch() {
     .then(data => {
       console.log(data)
 
-      document.querySelector('h2').innerText = data.title
-      document.querySelector('img').src = data.hdurl
-      document.querySelector('p').innerText = data.explanation
+      chooseDate.classList.add('hidden')
+      showDate.classList.toggle('hidden')
+      
+      document.querySelector('#name').innerText = data.title
+      document.querySelector('#image').src = data.hdurl
+      document.querySelector('#description').innerText = data.explanation
     })
     .catch(err => {
         console.log(`error ${err}`)
     });
+}
 
+
+
+document.querySelector('#reset').addEventListener('click', reset)
+
+function reset() {
+  chooseDate.classList.toggle('hidden')
+  showDate.classList.add('hidden')
 }
