@@ -82,11 +82,19 @@ body{
   font-size: 1rem;
 }
 
-.box img{
+.choose-box h4{
+  margin-top: 5rem;
+}
+
+.choose-box p{
+  margin-top: 2rem;
+}
+
+.show-box img{
   width: 100%;
 }
 
-.box p{
+.show-box p{
   text-align: justify;
 }
 
