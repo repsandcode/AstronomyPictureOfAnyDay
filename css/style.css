@@ -81,6 +81,10 @@ body{
   font-size: 2rem;
 }
 
+.choose-box{
+  padding: 3rem 0;
+}
+
 .choose-box h1{
   margin: 0;
 }
