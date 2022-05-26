@@ -13,13 +13,13 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
 
 html {
-  height: 1800px;
   background: radial-gradient(ellipse at bottom, #121922 100%, #090a0f 100%);
 }
 
 body{
-  height: 100%;
+  height: 100vh;
   font-size: 62.5%;
+  position: relative;
 }
 
 #stars {
@@ -74,13 +74,15 @@ body{
 }
 
 #title {
-  position: relative;
-  top: 0;
   color: #FFF;
   text-align: center;
   font-family: "lato", sans-serif;
   font-weight: 300;
   font-size: 2rem;
+}
+
+.choose-box h1{
+  margin: 0;
 }
 
 .choose-box h4{
@@ -89,6 +91,34 @@ body{
 
 .choose-box p{
   margin-top: 2rem;
+}
+
+.choose-box input,
+.choose-box button,
+.show-box input{
+  border: none;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+}
+
+.choose-box button,
+.show-box input{
+  background-color: rgba(155, 255, 200, 0.127);
+  color: #fff;
+}
+
+.choose-box button:is(:hover,:focus),
+.show-box input:is(:hover,:focus){
+  background-color: rgba(255, 255, 255);
+  color: #000;
+}
+
+.show-box{
+  padding: 3rem 0;
+}
+
+.show-box h2{
+  margin-top: 0;
 }
 
 .show-box img{
