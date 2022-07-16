@@ -79,6 +79,8 @@ body{
   font-family: "lato", sans-serif;
   font-weight: 300;
   font-size: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .choose-box{
@@ -87,19 +89,23 @@ body{
 
 .choose-box h1{
   margin: 0;
+  font-size: 3rem;
 }
 
 .choose-box h4{
   margin-top: 5rem;
+  font-size: 1.5rem;
 }
 
 .choose-box p{
   margin-top: 2rem;
+  font-size: 1rem;
 }
 
 .choose-box input,
 .choose-box button,
 .show-box input{
+  font-size: 1rem;
   border: none;
   border-radius: .5rem;
   padding: .5rem 1rem;
