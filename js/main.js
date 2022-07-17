@@ -18,20 +18,20 @@ function getFetch() {
       console.log(data.explanation)
 
       const x = data.explanation
-      x.split(' ').forEach(word => {
+      // x.split(' ').forEach(word => {
 
-        for(let i=0; i<x.length; i++){
-          let count = 0
-          if(word.endsWith('.')) count++;
-        }
+      //   for(let i=0; i<x.length; i++){
+      //     let count = 0
+      //     if(word.endsWith('.')) count++;
+      //   }
         
 
-        if(count==3){
+      //   if(count==3){
           
 
-          count=0
-        }
-      })
+      //     count=0
+      //   }
+      // })
 
       chooseDate.classList.add('hidden')
       showDate.classList.toggle('hidden')
