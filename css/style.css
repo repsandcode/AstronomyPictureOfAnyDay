@@ -24,7 +24,7 @@ body{
 
 .container {
   color: #FFF;
-  text-align: center;
+  /* text-align: center; */
   font-family: "lato", sans-serif;
   font-weight: 300;
   font-size: 2rem;
