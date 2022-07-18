@@ -22,7 +22,7 @@ body{
   position: relative;
 }
 
-#title {
+.container {
   color: #FFF;
   text-align: center;
   font-family: "lato", sans-serif;
