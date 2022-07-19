@@ -32,6 +32,10 @@ body{
   margin: 0 auto;
 }
 
+.button{
+  cursor: pointer;
+}
+
 .choose-box{
   padding: 3rem 0;
 }
