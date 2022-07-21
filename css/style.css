@@ -10,7 +10,7 @@
 body{
   font-size: 62.5%;
   position: relative;
-  background-image: url(/class20/class20-materials/objects-nasa/img/moon.jpg);
+  background-image: url(https://images.pexels.com/photos/1936752/pexels-photo-1936752.jpeg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -26,11 +26,6 @@ body{
 
 .container {
   font-family: "lato", sans-serif;
-  font-weight: 300;
-  font-size: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  height: 100vh;
 }
 
 .button{
@@ -38,13 +33,9 @@ body{
 }
 
 .choose-box{
-  padding: 3rem 0;
+  
 }
 
-.choose-box .logo{
-  position: relative;
-  /* width: 320px; */
-}
 
 .choose-box h1{
   margin: 0 auto;
@@ -59,18 +50,18 @@ body{
 
 .choose-box h4{
   margin-top: 5rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .choose-box p{
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .choose-box input,
 .choose-box button,
 .show-box input{
-  font-size: 2rem;
+  font-size: 1.6rem;
   border: none;
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -93,7 +84,7 @@ body{
 }
 
 .show-box{
-  padding: 3rem 0;
+ 
 }
 
 .show-box h2{
