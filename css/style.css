@@ -13,10 +13,13 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
 
 body{
-  height: 100vh;
   font-size: 62.5%;
   position: relative;
-  background: rgb(104, 118, 100);
+  background-image: url(/class20/class20-materials/objects-nasa/img/moon.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: #FFF;
 }
 
@@ -28,6 +31,7 @@ body{
   font-size: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .button{
@@ -41,15 +45,17 @@ body{
 .choose-box .logo{
   position: relative;
   width: 320px;
-  display: flex;
-  border: 4px solid #FFF;
-  border-bottom-right-radius: 1in;
 }
 
 .choose-box h1{
   margin: 0 auto;
   padding: 1rem 0;
   font-size: 2.5rem;
+  background-image: linear-gradient(280deg, rgba(255,255,255,1) 0%, rgba(243,119,66,1) 100%);;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
 }
 
 .choose-box h4{
