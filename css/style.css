@@ -7,11 +7,6 @@
   box-sizing: border-box;
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
-
 body{
   font-size: 62.5%;
   position: relative;
@@ -23,9 +18,13 @@ body{
   color: #FFF;
 }
 
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
+
 .container {
-  /* color: #FFF; */
-  /* text-align: center; */
   font-family: "lato", sans-serif;
   font-weight: 300;
   font-size: 2rem;
@@ -111,16 +110,6 @@ body{
 
 .hidden{
   display: none;
-}
-
-
-@keyframes animStar {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-2500px);
-  }
 }
 
 /******************************************
