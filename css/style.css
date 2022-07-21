@@ -28,16 +28,18 @@ body{
   font-family: "lato", sans-serif;
   padding: 3rem;
   width: auto;
+  height: 100vh;
 }
 
 .button{
   cursor: pointer;
 }
 
-.choose-box{
-  
-}
 
+/* CHOOSE BOX */ 
+.choose-box{
+  height: 100%;
+}
 
 .choose-box h1{
   margin: 0 auto;
@@ -85,8 +87,11 @@ body{
   font-weight: bold;
 }
 
+
+/* SHOW BOX */
+
 .show-box{
- 
+ height: 100%;
 }
 
 .show-box h2{
@@ -108,3 +113,5 @@ body{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+media
