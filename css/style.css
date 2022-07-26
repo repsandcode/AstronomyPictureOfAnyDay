@@ -107,7 +107,6 @@ video{
 /* SHOW BOX */
 
 .show-box{
-  height: 100%;
   position: absolute;
 }
 
@@ -155,7 +154,7 @@ video{
     font-size: calc(1rem + 1vw); 
     margin: 20% 0 10%;
   }
-  .choose-box p{ font-size: calc(.7rem + 1vw); }
+  .choose-box p{ font-size: calc(.5rem + 1vw); }
   .choose-box input,
   .choose-box button,
   .show-box input{ font-size: calc(.5rem + 1vw); }
@@ -187,8 +186,7 @@ video{
     font-size: calc(.5rem + 1vw);
     margin: 25% 0 15% 0;
   }
-  .choose-box p{ font-size: calc(.2rem + 1vw) }
-
+  .choose-box p{ font-size: calc(.3rem + 1vw) }
   .choose-box input,
   .choose-box button,
   .show-box input{ font-size: calc(.05rem + 1vw) }

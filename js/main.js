@@ -1,6 +1,8 @@
 //The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
 const chooseDate = document.querySelector('#choose-date')
 const showDate = document.querySelector('#show-date')
+const video = document.querySelector('#video');
+const overlay = document.querySelector('#overlay');
 
 
 document.querySelector('#get').addEventListener('click', getFetch)
@@ -15,9 +17,9 @@ function getFetch() {
     .then(res => res.json()) // parse response as JSON
     .then(data => {
       console.log(data)
-      console.log(data.explanation)
+      // console.log(data.explanation)
 
-      const x = data.explanation
+      // const x = data.explanation
       // x.split(' ').forEach(word => {
 
       //   for(let i=0; i<x.length; i++){
@@ -35,7 +37,11 @@ function getFetch() {
 
       chooseDate.classList.add('hidden')
       showDate.classList.toggle('hidden')
+      video.classList.add('hidden')
+      overlay.classList.add('hidden')
       
+      document.querySelector('body').style.background = 'rgb(19, 19, 19)';
+
       document.querySelector('#name').innerText = data.title
       document.querySelector('#image').src = data.hdurl
       document.querySelector('#description').innerText = data.explanation
@@ -52,4 +58,6 @@ document.querySelector('#reset').addEventListener('click', reset)
 function reset() {
   chooseDate.classList.toggle('hidden')
   showDate.classList.add('hidden')
+  video.classList.toggle('hidden')
+  overlay.classList.toggle('hidden')
 }
