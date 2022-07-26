@@ -115,7 +115,7 @@ body{
 }
 
 .show-box img{
-  width: 100%;
+  width: 70%;
 }
 
 .show-box p{
@@ -123,7 +123,7 @@ body{
 }
 
 .show-box video{
-  width: 100%;
+  width: 70%;
 }
 
 .hidden{
@@ -146,8 +146,8 @@ body{
   .choose-box button,
   .show-box input{ font-size: calc(.4rem + 1vw); }
   
-  .show-box h2{ font-size: calc(1.5rem + 1vw); }
-  .show-box p{ font-size: calc(.9rem + 1vw); }
+  .show-box h2{ font-size: calc(.7rem + 1vw); }
+  .show-box p{ font-size: calc(.5rem + 1vw); }
 }
 
 
@@ -163,8 +163,8 @@ body{
   .choose-box button,
   .show-box input{ font-size: calc(.5rem + 1vw); }
   
-  .show-box h2{ font-size: calc(1.5rem + 1vw); }
-  .show-box p{ font-size: calc(.9rem + 1vw); }
+  .show-box h2{ font-size: calc(.9rem + 1vw); }
+  .show-box p{ font-size: calc(.5rem + 1vw); }
 }
 
 @media (min-width: 768px){
@@ -179,8 +179,8 @@ body{
   .choose-box button,
   .show-box input{ font-size: calc(.2rem + 1vw) }
   
-  .show-box h2{ font-size: calc(2.5rem + 1vw) }
-  .show-box p{ font-size: calc(1.2rem + 1vw) }
+  .show-box h2{ font-size: calc(.5rem + 1vw) }
+  .show-box p{ font-size: calc(.4rem + 1vw) }
 }
 
 @media (min-width: 1280px){
@@ -195,6 +195,6 @@ body{
   .choose-box button,
   .show-box input{ font-size: calc(.05rem + 1vw) }
   
-  .show-box h2{ font-size: calc(2.5rem + 1vw) }
-  .show-box p{ font-size: calc(1.2rem + 1vw) }
+  .show-box h2{ font-size: calc(.4rem + 1vw) }
+  .show-box p{ font-size: calc(.2rem + 1vw) }
 }

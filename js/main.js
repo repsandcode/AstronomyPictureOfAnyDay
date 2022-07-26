@@ -42,7 +42,6 @@ function getFetch() {
       overlay.classList.add('hidden');
       
       document.querySelector('body').style.background = 'rgb(19, 19, 19)';
-
       document.querySelector('#name').innerText = data.title;
 
       if(data.media_type === 'video'){
@@ -53,10 +52,10 @@ function getFetch() {
         video_apod.classList.add('hidden');
       }
 
-      document.querySelector('#description').innerText = data.explanation
+      document.querySelector('#description').innerText = data.explanation;
     })
     .catch(err => {
-        console.log(`error ${err}`)
+        console.log(`error ${err}`);
     });
 }
 
@@ -67,7 +66,7 @@ document.querySelector('#reset').addEventListener('click', reset)
 function reset() {
   chooseDate.classList.toggle('hidden')
   showDate.classList.add('hidden')
-  video.classList.toggle('hidden')
+  video_background.classList.toggle('hidden')
   overlay.classList.toggle('hidden')
   video_apod.classList.toggle('hidden');
   image_apod.classList.toggle('hidden');
