@@ -1,9 +1,10 @@
 //The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
 const chooseDate = document.querySelector('#choose-date')
 const showDate = document.querySelector('#show-date')
-const video = document.querySelector('#video');
+const video_background = document.querySelector('#video-background');
 const overlay = document.querySelector('#overlay');
-
+const image_apod = document.querySelector('#image-apod');
+const video_apod = document.querySelector('#video-apod');
 
 document.querySelector('#get').addEventListener('click', getFetch)
 
@@ -35,15 +36,23 @@ function getFetch() {
       //   }
       // })
 
-      chooseDate.classList.add('hidden')
-      showDate.classList.toggle('hidden')
-      video.classList.add('hidden')
-      overlay.classList.add('hidden')
+      chooseDate.classList.add('hidden');
+      showDate.classList.toggle('hidden');
+      video_background.classList.add('hidden');
+      overlay.classList.add('hidden');
       
       document.querySelector('body').style.background = 'rgb(19, 19, 19)';
 
-      document.querySelector('#name').innerText = data.title
-      document.querySelector('#image').src = data.hdurl
+      document.querySelector('#name').innerText = data.title;
+
+      if(data.media_type === 'video'){
+        video_apod.src = data.url;
+        image_apod.classList.add('hidden');
+      }else{
+        image_apod.src = data.hdurl;
+        video_apod.classList.add('hidden');
+      }
+
       document.querySelector('#description').innerText = data.explanation
     })
     .catch(err => {
@@ -60,4 +69,6 @@ function reset() {
   showDate.classList.add('hidden')
   video.classList.toggle('hidden')
   overlay.classList.toggle('hidden')
+  video_apod.classList.toggle('hidden');
+  image_apod.classList.toggle('hidden');
 }

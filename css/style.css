@@ -19,7 +19,7 @@ body{
   font-family: "lato", sans-serif;
 }
 
-video{
+.video-background{
   position: absolute;
   top: 0;
   left: 0;
@@ -120,6 +120,10 @@ video{
 
 .show-box p{
   text-align: justify;
+}
+
+.show-box video{
+  width: 100%;
 }
 
 .hidden{
