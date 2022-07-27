@@ -6,6 +6,8 @@ const overlay = document.querySelector('#overlay');
 const image_apod = document.querySelector('#image-apod');
 const video_apod = document.querySelector('#video-apod');
 
+
+// get image
 document.querySelector('#get').addEventListener('click', getFetch)
 
 function getFetch() {
@@ -47,6 +49,8 @@ function getFetch() {
       if(data.media_type === 'video'){
         video_apod.src = data.url;
         image_apod.classList.add('hidden');
+
+        // make iframe element
       }else{
         image_apod.src = data.hdurl;
         video_apod.classList.add('hidden');

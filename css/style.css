@@ -122,10 +122,6 @@ body{
   text-align: justify;
 }
 
-.show-box video{
-  width: 45%;
-}
-
 .hidden{
   display: none;
 }
