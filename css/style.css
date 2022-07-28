@@ -107,7 +107,7 @@ body{
 /* SHOW BOX */
 
 .show-box{
-  position: absolute;
+  position: relative;
 }
 
 .show-box h2{
