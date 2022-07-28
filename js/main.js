@@ -19,23 +19,32 @@ function getFetch() {
     .then(res => res.json()) // parse response as JSON
     .then(data => {
       console.log(data)
-      // console.log(data.explanation)
 
-      // const x = data.explanation
-      // x.split(' ').forEach(word => {
+      
+      const sentencesArr = splitSentences(data.explanation);
+      let count = 0, 
+          str = '', 
+          pars = Math.ceil(sentencesArr.length/3),
+          newArr = [];
 
-      //   for(let i=0; i<x.length; i++){
-      //     let count = 0
-      //     if(word.endsWith('.')) count++;
-      //   }
-        
+      console.log(sentencesArr)
 
-      //   if(count==3){
+      for (let i = 0; i < sentencesArr.length; i++) {
+        if(count===3){
+          count = 0;
+          newArr.push(str);
+          str = '';
           
+        }else{
+          str += sentencesArr[i];
+          count++;
+        }
+        console.log(newArr)
+      }
 
-      //     count=0
-      //   }
-      // })
+      for (let i = 0; i < newArr.length; i++) {
+        console.log(newArr[i])
+      }
 
       chooseDate.classList.add('hidden');
       showDate.classList.toggle('hidden');
@@ -44,7 +53,7 @@ function getFetch() {
       
       document.querySelector('body').style.background = 'rgb(19, 19, 19)';
       document.querySelector('#name').innerText = data.title;
-      document.querySelector('#description').innerText = data.explanation;
+      // document.querySelector('#description').innerText = data.explanation;
       
       if(data.media_type === 'video'){
         image_apod.classList.add('hidden');
@@ -80,4 +89,8 @@ function reset() {
   video_background.classList.toggle('hidden')
   overlay.classList.toggle('hidden')
   image_apod.classList.toggle('hidden');
+}
+
+function splitSentences(str){
+  return str.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|");
 }
