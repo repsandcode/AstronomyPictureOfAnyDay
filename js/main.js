@@ -4,7 +4,6 @@ const showDate = document.querySelector('#show-date')
 const video_background = document.querySelector('#video-background');
 const overlay = document.querySelector('#overlay');
 const image_apod = document.querySelector('#image-apod');
-const video_apod = document.querySelector('#video-apod');
 
 
 // get image
@@ -45,18 +44,26 @@ function getFetch() {
       
       document.querySelector('body').style.background = 'rgb(19, 19, 19)';
       document.querySelector('#name').innerText = data.title;
-
+      document.querySelector('#description').innerText = data.explanation;
+      
       if(data.media_type === 'video'){
-        video_apod.src = data.url;
         image_apod.classList.add('hidden');
 
         // make iframe element
+        const ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", data.url);
+        ifrm.style.width = "640px";
+        ifrm.style.height = "480px";
+        ifrm.frameborder = "0";
+        ifrm.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;";
+        ifrm.allowFullscreen = true;
+
+        document.body.appendChild(ifrm);
       }else{
-        image_apod.src = data.hdurl;
-        video_apod.classList.add('hidden');
+        image_apod.src = data.url;
       }
 
-      document.querySelector('#description').innerText = data.explanation;
+      
     })
     .catch(err => {
         console.log(`error ${err}`);
@@ -72,6 +79,5 @@ function reset() {
   showDate.classList.add('hidden')
   video_background.classList.toggle('hidden')
   overlay.classList.toggle('hidden')
-  video_apod.classList.toggle('hidden');
   image_apod.classList.toggle('hidden');
 }
