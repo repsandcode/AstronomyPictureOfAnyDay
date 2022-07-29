@@ -93,3 +93,7 @@ function reset() {
 function splitSentences(str){
   return str.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|");
 }
+
+function arrangeDate(str) {
+  
+}

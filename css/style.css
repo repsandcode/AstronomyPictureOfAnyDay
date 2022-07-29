@@ -111,15 +111,22 @@ body{
 }
 
 .show-box h2{
-  margin-top: 0;
+  margin: 0;
 }
 
 .show-box img{
   width: 45%;
+  display: block;
+  margin-top: 5%;
 }
 
 .show-box p{
-  text-align: justify;
+  text-align: left;
+  margin-top: 10%;
+}
+
+.show-box input{
+  margin-top: 2%;
 }
 
 .hidden{
