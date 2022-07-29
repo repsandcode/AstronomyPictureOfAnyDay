@@ -19,8 +19,7 @@ function getFetch() {
     .then(res => res.json()) // parse response as JSON
     .then(data => {
       console.log(data)
-
-      
+      const date = arrangeDate(data.date);
       // const sentencesArr = splitSentences(data.explanation);
       // let count = 0, 
       //     str = '', 
@@ -54,7 +53,9 @@ function getFetch() {
       document.querySelector('body').style.background = 'rgb(19, 19, 19)';
       document.querySelector('#name').innerText = data.title;
       document.querySelector('#description').innerText = data.explanation;
+      document.querySelector('#date').innerText = date;
       image_apod.src = data.url;
+
 
       if(data.media_type === 'video'){
         image_apod.classList.add('hidden');
@@ -95,5 +96,24 @@ function splitSentences(str){
 }
 
 function arrangeDate(str) {
-  
+  const months = {
+    "01" : "JAN",
+    "02" : "FEB",
+    "03" : "MAR",
+    "04" : "APR",
+    "05" : "MAY",
+    "06" : "JUN",
+    "07" : "JUL",
+    "08" : "AUG",
+    "09" : "SEP",
+    "10" : "OCT",
+    "11" : "NOV",
+    "12" : "DEC",
+  }
+
+  let arr = str.split('-');
+  console.log(arr);
+  arr[1] = months[arr[1]]
+
+  return `${arr[1]} ${arr[2]}, ${arr[0]}`
 }
