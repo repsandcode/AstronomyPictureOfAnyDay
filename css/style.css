@@ -117,7 +117,7 @@ body{
 .show-box img{
   max-width: 800px;
   display: inline-block;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .show-box span{
@@ -128,9 +128,18 @@ body{
   border-radius: 1.5rem;
 }
 
+.show-box i{
+  display: block;
+  margin-top: 5%; 
+}
+
+.show-box i::before{
+  cursor: pointer;
+}
+
 .show-box p{
   text-align: left;
-  margin: 5% 0 0 0;
+  margin-top: 5%;
 }
 
 .show-box input{
@@ -160,6 +169,7 @@ body{
   
   .show-box h2{ font-size: calc(1.2rem + 1vw); }
   .show-box span { font-size: calc(.3rem + 1vw); }
+  .show-box i { font-size: calc(.6rem + 1vw); }
   .show-box p{ font-size: calc(.5rem + 1vw); }
   .show-box img { width: 100% }
 }
@@ -178,7 +188,6 @@ body{
   .show-box input{ font-size: calc(.5rem + 1vw); }
   
   .show-box h2{ font-size: calc(1.3rem + 1vw); }
-  /* .show-box span { font-size: calc(.3rem + 1vw); } */
   .show-box p{ font-size: calc(.5rem + 1vw); }
 }
 
@@ -195,7 +204,6 @@ body{
   .show-box input{ font-size: calc(.2rem + 1vw) }
   
   .show-box h2{ font-size: calc(1.4rem + 1vw) }
-  /* .show-box span { font-size: calc(.3rem + 1vw); } */
   .show-box p{ font-size: calc(.4rem + 1vw) }
 }
 
@@ -212,6 +220,5 @@ body{
   .show-box input{ font-size: calc(.05rem + 1vw) }
   
   .show-box h2{ font-size: calc(1.5rem + 1vw) }
-  /* .show-box span { font-size: calc(.3rem + 1vw); } */
-  .show-box p{ font-size: calc(.2rem + 1vw) }
+  .show-box p{ font-size: calc(.3rem + 1vw) }
 }
