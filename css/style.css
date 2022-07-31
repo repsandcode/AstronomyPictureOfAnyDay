@@ -83,7 +83,7 @@ body{
 .choose-box button,
 .show-box input{
   border: none;
-  border-radius: .5rem;
+  border-radius: 1rem;
   padding: .5rem 1rem;
 }
 
@@ -122,7 +122,6 @@ body{
 
 .show-box span{
   display: inline-block;
-  margin-top: 3%;
   padding: .5rem 1.2rem;
   border: 1px solid #FFF;
   border-radius: 1.5rem;
@@ -130,7 +129,6 @@ body{
 
 .show-box i{
   display: block;
-  margin-top: 5%; 
 }
 
 .show-box i::before{
@@ -139,7 +137,6 @@ body{
 
 .show-box p{
   text-align: left;
-  margin-top: 5%;
 }
 
 .show-box input{
@@ -155,23 +152,37 @@ body{
 /* ADDITIONAL STYLES
 /*******************************************/
 
-@media (min-width: 0px) {
-  .container {padding: 3rem 1rem;}
-  .choose-box h1{ font-size: calc(1.5rem + 1vw); }
+@media (min-width: 1280px){
+  .container {padding: 3rem;}
+  .choose-box h1{ font-size: calc(2rem + 1vw); }
   .choose-box h4{ 
-    font-size: calc(.8rem + 1vw); 
-    margin: 20% 0 10%;
+    font-size: calc(.5rem + 1vw);
+    margin: 25% 0 15% 0;
   }
-  .choose-box p{ font-size: calc(.6rem + 1vw); }
+  .choose-box p{ font-size: calc(.3rem + 1vw) }
   .choose-box input,
   .choose-box button,
-  .show-box input{ font-size: calc(.4rem + 1vw); }
+  .show-box input{ font-size: calc(.05rem + 1vw) }
   
-  .show-box h2{ font-size: calc(1.2rem + 1vw); }
-  .show-box span { font-size: calc(.3rem + 1vw); }
-  .show-box i { font-size: calc(.6rem + 1vw); }
-  .show-box p{ font-size: calc(.5rem + 1vw); }
-  .show-box img { width: 100% }
+  .show-box h2{ font-size: calc(1.5rem + 1vw) }
+  .show-box p{ font-size: calc(.3rem + 1vw) }
+}
+
+
+@media (min-width: 768px){
+  .container {padding: 3rem 2.5rem;}
+  .choose-box h1{ font-size: calc(2rem + 1vw); }
+  .choose-box h4{ 
+    font-size: calc(.6rem + 1vw);
+    margin: 25% 0 15% 0;
+  }
+  .choose-box p{ font-size: calc(.4rem + 1vw) }
+  .choose-box input,
+  .choose-box button,
+  .show-box input{ font-size: calc(.2rem + 1vw) }
+  
+  .show-box h2{ font-size: calc(1.4rem + 1vw) }
+  .show-box p{ font-size: calc(.4rem + 1vw) }
 }
 
 
@@ -191,34 +202,31 @@ body{
   .show-box p{ font-size: calc(.5rem + 1vw); }
 }
 
-@media (min-width: 768px){
-  .container {padding: 3rem 2.5rem;}
-  .choose-box h1{ font-size: calc(2rem + 1vw); }
-  .choose-box h4{ 
-    font-size: calc(.6rem + 1vw);
-    margin: 25% 0 15% 0;
-  }
-  .choose-box p{ font-size: calc(.4rem + 1vw) }
-  .choose-box input,
-  .choose-box button,
-  .show-box input{ font-size: calc(.2rem + 1vw) }
-  
-  .show-box h2{ font-size: calc(1.4rem + 1vw) }
-  .show-box p{ font-size: calc(.4rem + 1vw) }
-}
 
-@media (min-width: 1280px){
+@media (min-width: 0px) {
   .container {padding: 3rem;}
-  .choose-box h1{ font-size: calc(2rem + 1vw); }
+  .choose-box h1{ font-size: calc(4.8rem + 1vw); }
   .choose-box h4{ 
-    font-size: calc(.5rem + 1vw);
-    margin: 25% 0 15% 0;
+    font-size: calc(2.5rem + 1vw); 
+    margin: 25% 0 15%;
   }
-  .choose-box p{ font-size: calc(.3rem + 1vw) }
+  .choose-box p{ font-size: calc(2rem + 1vw); }
   .choose-box input,
   .choose-box button,
-  .show-box input{ font-size: calc(.05rem + 1vw) }
+  .show-box input{ font-size: calc(2rem + 1vw); }
   
-  .show-box h2{ font-size: calc(1.5rem + 1vw) }
-  .show-box p{ font-size: calc(.3rem + 1vw) }
+  .show-box h2{ font-size: calc(2.8rem + 1vw); }
+  .show-box span { 
+    font-size: calc(1.2rem + 1vw); 
+    margin-top: 5%;
+  }
+  .show-box i { 
+    font-size: calc(1.2rem + 1vw); 
+    margin-top: 10%; 
+  }
+  .show-box p{ 
+    font-size: calc(1.6rem + 1vw); 
+    margin-top: 8%;
+  }
+  .show-box img { max-width: 100% }
 }

@@ -5,10 +5,15 @@ const video_background = document.querySelector('#video-background');
 const overlay = document.querySelector('#overlay');
 const image_apod = document.querySelector('#image-apod');
 
+// change mode
+document.querySelector('#change-mode').addEventListener('click', changeMode);
+function changeMode() {
+  
+}
+
 
 // get image
 document.querySelector('#get').addEventListener('click', getFetch)
-
 function getFetch() {
   const date = document.querySelector('input').value
   console.log(date)
