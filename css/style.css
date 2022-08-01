@@ -71,14 +71,6 @@ body{
   color: transparent;
 }
 
-.choose-box h4{
-  margin: 10% 0;
-}
-
-.choose-box p{
-  margin-top: 1rem;
-}
-
 .choose-box input,
 .choose-box button,
 .show-box input{
@@ -117,14 +109,21 @@ body{
 }
 
 .show-box img{
-  max-width: 800px;
+  max-width: 700px;
   display: inline-block;
   margin-top: 2%;
+  cursor: pointer;
+
+  transition: all .3s ease-in;  
+}
+
+.show-box img:is(:focus, :hover){
+  opacity: 0.9;
+	transform: scale(.99);
 }
 
 .show-box span{
   display: inline-block;
-  padding: 1.2rem 2.5rem;
   border: 1px solid #FFF;
   border-radius: 5rem;
 }
@@ -144,7 +143,6 @@ body{
 
 .show-box input{
   display: block;
-  margin-top: 5%;
 }
 
 .hidden{
@@ -155,81 +153,113 @@ body{
 /* ADDITIONAL STYLES
 /*******************************************/
 
-@media (min-width: 1280px){
-  .container {padding: 3rem;}
-  .choose-box h1{ font-size: calc(2rem + 1vw); }
-  .choose-box h4{ 
-    font-size: calc(.5rem + 1vw);
-    margin: 25% 0 15% 0;
-  }
-  .choose-box p{ font-size: calc(.3rem + 1vw) }
-  .choose-box input,
-  .choose-box button,
-  .show-box input{ font-size: calc(.05rem + 1vw) }
-  
-  .show-box h2{ font-size: calc(1.5rem + 1vw) }
-  .show-box p{ font-size: calc(.3rem + 1vw) }
-}
-
-
-@media (min-width: 768px){
-  .container {padding: 3rem 2.5rem;}
-  .choose-box h1{ font-size: calc(2rem + 1vw); }
-  .choose-box h4{ 
-    font-size: calc(.6rem + 1vw);
-    margin: 25% 0 15% 0;
-  }
-  .choose-box p{ font-size: calc(.4rem + 1vw) }
-  .choose-box input,
-  .choose-box button,
-  .show-box input{ font-size: calc(.2rem + 1vw) }
-  
-  .show-box h2{ font-size: calc(1.4rem + 1vw) }
-  .show-box p{ font-size: calc(.4rem + 1vw) }
-}
-
-
-@media (min-width: 481px) {
-  .container {padding: 3rem 1.8rem;}
-  .choose-box h1{ font-size: calc(2rem + 1vw); }
-  .choose-box h4{ 
-    font-size: calc(1rem + 1vw); 
-    margin: 20% 0 10%;
-  }
-  .choose-box p{ font-size: calc(.5rem + 1vw); }
-  .choose-box input,
-  .choose-box button,
-  .show-box input{ font-size: calc(.5rem + 1vw); }
-  
-  .show-box h2{ font-size: calc(1.3rem + 1vw); }
-  .show-box p{ font-size: calc(.5rem + 1vw); }
-}
-
 
 @media (min-width: 0px) {
   .container {padding: 3rem;}
+
+  /* CHOOSE BOX */
   .choose-box h1{ font-size: calc(4.8rem + 1vw); }
   .choose-box h4{ 
     font-size: calc(2.5rem + 1vw); 
-    margin: 25% 0 15%;
+    margin: 25% 0 15% 0;
   }
   .choose-box p{ font-size: calc(2rem + 1vw); }
   .choose-box input,
   .choose-box button,
   .show-box input{ font-size: calc(2rem + 1vw); }
   
-  .show-box h2{ font-size: calc(4rem + 1vw); }
+
+  /* SHOW BOX */
+  .show-box h2{ font-size: calc(3.8rem + 1vw) }
   .show-box span { 
-    font-size: calc(1.5rem + 1vw); 
-    margin-top: 5%;
+    font-size: calc(1.2rem + 1vw); 
+    margin-top: 6%;
+    padding: 1.2rem 2.5rem;
   }
   .show-box i { 
-    font-size: calc(2.5rem + 1vw); 
-    margin-top: 15%; 
+    font-size: calc(2rem + 1vw); 
+    margin-top: 18%; 
   }
   .show-box p{ 
     font-size: calc(2rem + 1vw); 
-    margin-top: 9%;
+    margin-top: 8%;
   }
-  .show-box img { max-width: 100% }
+  .show-box input{ margin-top: 18%; } 
+}
+
+
+/* @media (min-width: 481px) {
+  .choose-box h1{ font-size: calc(4.3rem + 1vw); }
+  .choose-box h4{ 
+    font-size: calc(2.1rem + 1vw); 
+    margin: 25% 0 15% 0;
+  }
+  .choose-box p{ font-size: calc(1.5rem + 1vw); }
+  .choose-box input,
+  .choose-box button,
+  .show-box input{ font-size: calc(1.5rem + 1vw); }
+} */
+
+
+/* @media (min-width: 768px){
+  .choose-box h1{ font-size: calc(2.6rem + 1vw); }
+  .choose-box h4{ 
+    font-size: calc(1.3rem + 1vw); 
+    margin: 16% 0 10% 0;
+  }
+  .choose-box p{ font-size: calc(.6rem + 1vw); }
+  .choose-box input,
+  .choose-box button,
+  .show-box input{ 
+    font-size: calc(.6rem + 1vw); 
+    padding: .5rem 1.5rem;
+  }
+
+  .show-box h2{ font-size: calc(2.2rem + 1vw) }
+  .show-box span { 
+    font-size: calc(.4rem + 1vw); 
+    margin-top: 3%;
+    padding: .8rem 2rem;
+  }
+  .show-box i { 
+    font-size: calc(.9rem + 1vw); 
+    margin-top: 10%; 
+  }
+  .show-box p{ 
+    font-size: calc(.9rem + 1vw); 
+    margin-top: 5%;
+  }
+  .show-box input{ margin-top: 10%; } 
+  .show-box img { width: 100%;}
+} */
+
+@media (min-width: 1280px){
+  .choose-box h1{ font-size: calc(2.2rem + 1vw); }
+  .choose-box h4{ 
+    font-size: calc(.8rem + 1vw); 
+    margin: 16% 0 10% 0;
+  }
+  .choose-box p{ font-size: calc(.4rem + 1vw); }
+  .choose-box input,
+  .choose-box button,
+  .show-box input{ 
+    font-size: calc(.4rem + 1vw); 
+    padding: .5rem 1.5rem;
+  }
+
+  .show-box h2{ font-size: calc(2rem + 1vw) }
+  .show-box span { 
+    font-size: calc(.2rem + 1vw); 
+    margin-top: 3%;
+    padding: .8rem 2rem;
+  }
+  .show-box i { 
+    font-size: calc(.5rem + 1vw); 
+    margin-top: 10%; 
+  }
+  .show-box p{ 
+    font-size: calc(.8rem + 1vw); 
+    margin-top: 5%;
+  }
+  .show-box input{ margin-top: 10%; }  
 }

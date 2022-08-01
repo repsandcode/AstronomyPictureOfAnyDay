@@ -4,6 +4,7 @@ const showDate = document.querySelector('#show-date')
 const video_background = document.querySelector('#video-background');
 const overlay = document.querySelector('#overlay');
 const image_apod = document.querySelector('#image-apod');
+const image_src = document.querySelector('#image-src');
 
 // change mode
 document.querySelector('#change-mode').addEventListener('click', changeMode);
@@ -60,7 +61,7 @@ function getFetch() {
       document.querySelector('#description').innerText = data.explanation;
       document.querySelector('#date').innerText = date;
       image_apod.src = data.url;
-
+      image_src.href = data.url;
 
       if(data.media_type === 'video'){
         image_apod.classList.add('hidden');
