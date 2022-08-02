@@ -1,19 +1,50 @@
 //The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
-const chooseDate = document.querySelector('#choose-date')
-const showDate = document.querySelector('#show-date')
+
+// CHOOSE DATE variables
+const chooseDate = document.querySelector('#choose-date');
 const video_background = document.querySelector('#video-background');
 const overlay = document.querySelector('#overlay');
+// SHOW DATE variables
+const showDate = document.querySelector('#show-date');
 const image_apod = document.querySelector('#image-apod');
 const image_src = document.querySelector('#image-src');
+const body = document.querySelector('body');
+const span_date = document.querySelector('#date');
+const description = document.querySelector('#description');
+const reset = document.querySelector('#reset');
 
-// change mode
+
+// DARK MODE TO LIGHT MODE -> vice versa
 document.querySelector('#change-mode').addEventListener('click', changeMode);
 function changeMode() {
-  
+
+  if(body.style.background === 'rgb(255, 255, 255)'){
+    body.style.background = 'rgb(19, 19, 19)';
+
+    // elements of show date
+    showDate.style.color = 'rgb(255, 255, 255)';
+    span_date.style.border = '2px solid rgb(255, 255, 255)';
+    span_date.style.fontWeight = '500';
+    description.style.fontWeight = '500';
+    reset.style.backgroundColor = 'rgb(255, 255, 255)'; 
+    reset.style.color = 'rgb(19, 19, 19)';
+    reset.style.fontWeight = '600';
+  }else{
+    body.style.background = 'rgb(255, 255, 255)';
+    
+    // elements of show date
+    showDate.style.color = 'rgb(19, 19, 19)';
+    span_date.style.border = '3px solid rgb(19, 19, 19)';
+    span_date.style.fontWeight = '600';
+    description.style.fontWeight = '600';
+    reset.style.backgroundColor = 'rgb(19, 19, 19)';
+    reset.style.color = 'rgb(255, 255, 255)';
+    reset.style.fontWeight = '400';
+  } 
 }
 
 
-// get image
+// GET APOD
 document.querySelector('#get').addEventListener('click', getFetch)
 function getFetch() {
   const date = document.querySelector('input').value
@@ -56,7 +87,9 @@ function getFetch() {
       video_background.classList.add('hidden');
       overlay.classList.add('hidden');
       
-      document.querySelector('body').style.background = 'rgb(19, 19, 19)';
+      body.style.background = 'rgb(19, 19, 19)';
+      showDate.style.color = 'rgb(255, 255, 255)';
+      reset.style.fontWeight = '600';
       document.querySelector('#name').innerText = data.title;
       document.querySelector('#description').innerText = data.explanation;
       document.querySelector('#date').innerText = date;
@@ -87,20 +120,24 @@ function getFetch() {
 
 
 
-document.querySelector('#reset').addEventListener('click', reset)
-
-function reset() {
-  chooseDate.classList.toggle('hidden')
-  showDate.classList.add('hidden')
-  video_background.classList.toggle('hidden')
-  overlay.classList.toggle('hidden')
+// RESET BUTTON on click
+reset.addEventListener('click', back);
+function back() {
+  chooseDate.classList.toggle('hidden');
+  showDate.classList.add('hidden');
+  video_background.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
   image_apod.classList.toggle('hidden');
 }
 
+
+// function to split sentences in a string
 function splitSentences(str){
   return str.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|");
 }
 
+
+// function to return a date in an order
 function arrangeDate(str) {
   const months = {
     "01" : "JAN",
