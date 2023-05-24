@@ -43,10 +43,12 @@ body{
 /* LAYOUT
 /*******************************************/
 
+
+/* Global classes */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  /* height: 100vh; */
+  padding: 0 2rem;
   position: relative;
 }
 
@@ -54,12 +56,33 @@ body{
   cursor: pointer;
 }
 
+.choose-box input,
+.choose-box button,
+.show-box input{
+  border: none;
+  border-radius: 5rem;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.choose-box button,
+.show-box input{
+  background-color: rgba(255, 255, 255);
+}
+
+.hidden{
+  display: none;
+}
+
+
 
 
 /* CHOOSE BOX */ 
 .choose-box{
-  position: absolute;
-  z-index: 2;
+  /* position: absolute;
+  z-index: 2; */
+  padding-top: 1.5rem;
 }
 
 .choose-box h1{
@@ -69,20 +92,16 @@ body{
   -webkit-background-clip: text;
   -moz-background-clip: text;
   color: transparent;
+  font-size: 2rem;
 }
 
-.choose-box input,
-.choose-box button,
-.show-box input{
-  border: none;
-  border-radius: 5rem;
-  padding: 1rem 2rem;
-  font-weight: 500;
+.choose-box h4{
+  font-size: 1.2rem;
+  margin: 2rem 0;
 }
 
-.choose-box button,
-.show-box input{
-  background-color: rgba(255, 255, 255);
+.choose-box p{
+  font-size: 1rem;
 }
 
 .choose-box button:is(:hover,:focus){
@@ -96,8 +115,9 @@ body{
 }
 
 
-/* SHOW BOX */
 
+
+/* SHOW BOX */
 .show-box{
   position: relative;
 }
@@ -144,15 +164,12 @@ body{
   display: block;
 }
 
-.hidden{
-  display: none;
-}
+
+
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-
 @media (min-width: 0px) {
   
 }
