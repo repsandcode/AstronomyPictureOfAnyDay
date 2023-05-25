@@ -31,18 +31,20 @@
 				</h4>
 				<p>Choose a date below</p>
 				<input type="date" name="" value="">
-				<button type="button" name="button" id="get" class="button">Get Photo</button>
+				<button type="button" name="button" id="get" class="get-photo">Get Photo</button>
 			</div>
 
 			<div id="show-date" class="show-box hidden">
-				<h2 id="name" class="pic-name"></h2>
-				<span id="date"></span>
-				<i id="change-mode" class="fa-solid fa-circle-half-stroke"></i>
-				<p id="description"></p>
+				<h1 id="name" class="pic-name"></h1>
+				<span id="date" class="date"></span>
+				<div class="change-mode">
+					<i id="change-mode" class="fa-solid fa-circle-half-stroke"></i>
+				</div>
 				<a id="image-src" href="">
 					<img id="image-apod" src="" alt="">
 				</a>
-				<input id="reset" type="button" name="reset" value="Reset" class="button">
+				<p id="description"></p>
+				<button type="button" name="reset" id="reset" class="reset">Reset</button>
 			</div>
 			
 		</div>
