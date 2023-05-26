@@ -55,32 +55,18 @@ function getFetch() {
   fetch(url)
     .then(res => res.json()) // parse response as JSON
     .then(data => {
-      console.log(data)
-      const date = arrangeDate(data.date);
-      // const sentencesArr = splitSentences(data.explanation);
-      // let count = 0, 
-      //     str = '', 
-      //     pars = Math.ceil(sentencesArr.length/3),
-      //     newArr = [];
+      console.log(data)  
 
-      // console.log(sentencesArr)
-
-      // for (let i = 0; i < sentencesArr.length; i++) {
-      //   if(count===3){
-      //     count = 0;
-      //     newArr.push(str);
-      //     str = '';
+      const descriptionArr = splitSentences(data.explanation);
+      
+      console.log(descriptionArr)
+      
+      for (let i = 0; i < descriptionArr.length; i += 2) {
+          const currentElement = descriptionArr[i];
+          const nextElement = descriptionArr[i + 1];
           
-      //   }else{
-      //     str += sentencesArr[i];
-      //     count++;
-      //   }
-      //   console.log(newArr)
-      // }
-
-      // for (let i = 0; i < newArr.length; i++) {
-      //   console.log(newArr[i])
-      // }
+          document.querySelector('#description').innerText += undefinedChecker(currentElement) + ' ' + undefinedChecker(nextElement) + '\n\n';
+      }
 
       chooseDate.classList.add('hidden');
       showDate.classList.toggle('hidden');
@@ -91,8 +77,8 @@ function getFetch() {
       showDate.style.color = 'rgb(255, 255, 255)';
       reset.style.fontWeight = '600';
       document.querySelector('#name').innerText = data.title;
-      document.querySelector('#description').innerText = data.explanation;
-      document.querySelector('#date').innerText = date;
+      // document.querySelector('#description').innerText = data.explanation;
+      document.querySelector('#date').innerText = arrangeDate(data.date);
       image_apod.src = data.url;
       image_src.href = data.url;
 
@@ -131,9 +117,29 @@ function back() {
 }
 
 
+// function to check if a str is undefined
+function undefinedChecker(str){
+  if(str !== undefined) return str;
+  return '';
+}
+
+
 // function to split sentences in a string
-function splitSentences(str){
-  return str.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|");
+function splitSentences(paragraph){
+  const sentences = []
+  let start = 0
+  
+  for (let i = 0; i < paragraph.length; i++) {
+      if (paragraph[i] === '.' || paragraph[i] === '?' || paragraph[i] === '!') {
+          const sentence = paragraph.substring(start, i + 1).trim()
+  
+          sentences.push(sentence)
+  
+          start = i + 1
+      }
+  }
+  
+  return sentences;
 }
 
 
