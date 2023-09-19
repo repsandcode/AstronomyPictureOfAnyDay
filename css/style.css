@@ -3,40 +3,40 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   font-size: 62.5%;
   position: relative;
-  color: #FFF;
+  color: #fff;
   line-height: 1.6;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100vh;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-h1{
+h1 {
   font-size: 2rem;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-.video-background{
+.video-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .89;
+  opacity: 0.89;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,59 +54,66 @@ h1{
   position: relative;
 }
 
-.button{
+.button {
   cursor: pointer;
 }
 
 .choose-box input,
 .choose-box .get-photo,
-.show-box .reset{
+.show-box .reset {
   border: none;
   border-radius: 5rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-weight: 500;
   font-size: 1rem;
 }
 
 .choose-box .get-photo,
-.show-box .reset{
+.show-box .reset {
   background-color: rgba(255, 255, 255);
   cursor: pointer;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-
-
-
-/* CHOOSE BOX */ 
-.choose-box{
+/* CHOOSE BOX */
+.choose-box {
   padding-top: 2rem;
 }
 
-.choose-box h1{
+.choose-box h1 {
   margin-top: 0;
-  background-image: linear-gradient(319deg, rgba(255,255,255,1) 0%, rgba(235,166,71,1) 50%, rgba(161,114,49,1) 100%);
+  background-image: linear-gradient(
+    319deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(235, 166, 71, 1) 50%,
+    rgba(161, 114, 49, 1) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   color: transparent;
 }
 
-.choose-box h4{
+.choose-box h4 {
   font-size: 1.2rem;
   margin: 4rem 0;
 }
 
-.choose-box p{
+.choose-box p {
   font-size: 1rem;
 }
 
-.choose-box button:is(:hover,:focus){
+.choose-box button:is(:hover, :focus) {
   background-color: rgba(255, 255, 255);
-  background-image: linear-gradient(319deg, rgba(255,255,255,1) 0%, rgba(235,166,71,1) 50%, rgba(161,114,49,1) 100%);
+  background-image: linear-gradient(
+    319deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(235, 166, 71, 1) 50%,
+    rgba(161, 114, 49, 1) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -114,62 +121,64 @@ h1{
   font-weight: bold;
 }
 
-
-
-
 /* SHOW BOX */
 /* .show-box{
   position: relative;
 } */
 
-.show-box h1{
+.show-box h1 {
   margin-bottom: 2.5rem;
 }
 
-.show-box .date{
-  border: 1px solid #FFF;
+.show-box .date {
+  border: 1px solid #fff;
   border-radius: 5rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-weight: 500;
   font-size: 1rem;
 }
 
-.show-box .change-mode{
+.show-box .change-mode {
   margin: 4rem 0 8rem 0;
   font-size: 1.2rem;
 }
 
-.show-box .change-mode i{
+.show-box .change-mode i {
   cursor: pointer;
 }
 
-.show-box img{
-  width: 100%;
-  display: inline-block;
-  cursor: pointer;
-  transition: all .3s ease-in;  
+.show-box .content-box {
+  border: 1px solid white;
+  max-width: 800px;
+  border-radius: 24px;
 }
 
-.show-box img:is(:focus, :hover){
+.content-box .image {
+}
+
+.content-box img {
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.content-box img:is(:focus, :hover) {
   opacity: 0.9;
-	transform: scale(.99);
+  transform: scale(0.99);
 }
 
-.show-box p{
+.content-box p {
   font-size: 1.2rem;
   margin: 2rem 0 6rem 0;
 }
 
-.show-box .reset{
+.show-box .reset {
   margin-bottom: 2rem;
 }
-
-
-
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 @media (min-width: 0px) {
-  
 }

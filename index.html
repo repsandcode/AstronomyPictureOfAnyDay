@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
 
-		<title>Astronomy Photo of the Day</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="This is where your description goes">
+	<meta name="keywords" content="one, two, three">
 
-		<!-- google fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-		<!-- font-awesome -->
-		<script src="https://kit.fontawesome.com/363a78aff8.js" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<video class="video-background" id="video-background" src="img/lapse.mp4" muted loop autoplay></video>
-		<div id="overlay" class="overlay"></div>
+	<title>Astronomy Photo of the Day</title>
 
-		<div class="container">	
-			<div id="choose-date" class="choose-box">
-				<h1>Maharlika <br/> 
-						Space Center
-				</h1>
-				<h4>
-					NASA's Astronomy Photo of the Day. On your hands.
-				</h4>
-				<p>Choose a date below</p>
-				<input type="date" name="" value="">
-				<button type="button" name="button" id="get" class="get-photo">Get Photo</button>
-			</div>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- font-awesome -->
+	<script src="https://kit.fontawesome.com/363a78aff8.js" crossorigin="anonymous"></script>
+</head>
 
-			<div id="show-date" class="show-box hidden">
-				<h1 id="name" class="pic-name"></h1>
-				<span id="date" class="date"></span>
-				<div class="change-mode">
-					<i id="change-mode" class="fa-solid fa-circle-half-stroke"></i>
-				</div>
-				<a id="image-src" href="">
-					<img id="image-apod" src="" alt="">
-				</a>
-				<p id="description"></p>
-				<button type="button" name="reset" id="reset" class="reset">Reset</button>
-			</div>
-			
+<body>
+	<video class="video-background" id="video-background" src="img/lapse.mp4" muted loop autoplay></video>
+	<div id="overlay" class="overlay"></div>
+
+	<div class="container">
+		<div id="choose-date" class="choose-box">
+			<h1>Maharlika <br />
+				Space Center
+			</h1>
+			<h4>
+				NASA's Astronomy Photo of the Day. On your hands.
+			</h4>
+			<p>Choose a date below</p>
+			<input type="date" name="" value="">
+			<button type="button" name="button" id="get" class="get-photo">Get Photo</button>
 		</div>
-	
-		
 
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+		<div id="show-date" class="show-box hidden">
+			<h1 id="name" class="pic-name"></h1>
+			<span id="date" class="date"></span>
+
+			<div class="change-mode">
+				<i id="change-mode" class="fa-solid fa-circle-half-stroke"></i>
+			</div>
+
+			<!-- image and description -->
+			<div class="content-box">
+				<div class="image">
+					<a id="image-src" href="">
+						<img id="image-apod" src="" alt="">
+					</a>
+				</div>
+				<p id="description"></p>
+			</div>
+
+			<button type="button" name="reset" id="reset" class="reset">Reset</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>
