@@ -139,7 +139,7 @@ h1 {
 }
 
 .show-box .change-mode {
-  margin: 4rem 0 8rem 0;
+  margin: 4rem 0;
   font-size: 1.2rem;
 }
 
@@ -148,21 +148,19 @@ h1 {
 }
 
 .show-box .content-box {
-  padding: 2rem;
-  border: 1px solid white;
-  /* max-width: 800px; */
-  border-radius: 24px;
+  padding: 2rem 0;
+  width: 100%;
 }
 
 .content-box .image {
   width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
 }
 
 .image a img {
   width: 100%;
   display: block;
+  border: 1px solid white;
+  border-radius: 24px;
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
@@ -173,8 +171,9 @@ h1 {
 }
 
 .content-box p {
-  font-size: 1.2rem;
-  margin: 2rem 0 6rem 0;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 2;
 }
 
 .show-box .reset {
@@ -184,5 +183,3 @@ h1 {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-@media (min-width: 0px) {
-}

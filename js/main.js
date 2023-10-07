@@ -73,7 +73,7 @@ function getFetch() {
           undefinedChecker(currentElement) +
           " " +
           undefinedChecker(nextElement) +
-          "\n\n";
+          "";
       }
 
       chooseDate.classList.add("hidden");
