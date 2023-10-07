@@ -1,11 +1,4 @@
-/* 
-The user will enter a date. 
-Use that date to get the NASA picture of the day from that date! 
-
-https://api.nasa.gov/
-*/
-
-"use strict";
+//The user will enter a date. Use that date to get the NASA picture of the day from that date! https://api.nasa.gov/
 
 // CHOOSE DATE variables
 const chooseDate = document.querySelector("#choose-date");
@@ -73,7 +66,7 @@ function getFetch() {
           undefinedChecker(currentElement) +
           " " +
           undefinedChecker(nextElement) +
-          "";
+          "\n\n";
       }
 
       chooseDate.classList.add("hidden");
