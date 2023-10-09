@@ -177,7 +177,9 @@ h1 {
 }
 
 .show-box .reset {
+  width: 10rem;
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 /******************************************
