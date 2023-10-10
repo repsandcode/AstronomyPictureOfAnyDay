@@ -173,7 +173,7 @@ h1 {
 
 .content-box p {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 2;
 }
 
@@ -186,6 +186,12 @@ h1 {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (min-width: 450px) {
+  .content-box p {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .show-box .content-box {
     display: flex;
