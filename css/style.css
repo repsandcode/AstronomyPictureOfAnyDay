@@ -178,9 +178,7 @@ h1 {
 }
 
 .show-box .reset {
-  width: 10rem;
   margin-bottom: 2rem;
-  padding: 1rem;
 }
 
 /******************************************
@@ -189,6 +187,10 @@ h1 {
 @media screen and (min-width: 450px) {
   .content-box p {
     font-size: 1.5rem;
+  }
+
+  .show-box .reset {
+    padding: 0.8rem 2rem;
   }
 }
 
